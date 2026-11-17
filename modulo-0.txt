@@ -1,0 +1,1598 @@
+﻿Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 4
+Fundamentos técnicos
+4 aulas
+3 h 34
+
+Python, Git, APIs e containers: a base para ler, versionar, integrar e publicar.
+
+4.1
+Python o suficiente para IA
+4.2
+Git do zero, e Git com agentes
+54 min
+4.3
+APIs e middleware: o agente conversando com os sistemas
+17 min
+4.4
+Containers e deploy: do notebook ao servidor
+12 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / Comece aqui ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 4
+Fundamentos técnicos
+4 aulas
+3 h 34
+
+Python, Git, APIs e containers: a base para ler, versionar, integrar e publicar.
+
+4.1
+Python o suficiente para IA
+4.2
+Git do zero, e Git com agentes
+54 min
+4.3
+APIs e middleware: o agente conversando com os sistemas
+17 min
+4.4
+Containers e deploy: do notebook ao servidor
+12 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / Introdução à IA e à engenharia de IA ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 1
+Introdução à IA e à engenharia de IA
+10 aulas
+2 h 27
+
+O que é IA e engenharia de IA, e do LLM ao RAG e ao tool calling: o que é preciso entender para construir com modelos de linguagem.
+
+1.1
+O que é inteligência artificial
+1.2
+O que é engenharia de IA
+1.3
+IA, Machine Learning, Deep Learning e IA generativa
+1.4
+Como funciona um LLM: tokens, contexto, amostragem e alucinação
+1.5
+Prompt engineering: papel, contexto, exemplos e formato
+1.6
+Treino vs contexto: fine-tuning ou RAG?
+1.7
+Embeddings: como a IA representa significado
+1.8
+RAG do zero: chunking, banco vetorial, retrieval e top-k
+1.9
+RAG melhor: reranking, busca híbrida e citações
+1.10
+Tool calling: como o modelo chama APIs
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / Engenharia em volta do modelo ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 1
+Introdução à IA e à engenharia de IA
+10 aulas
+2 h 27
+
+O que é IA e engenharia de IA, e do LLM ao RAG e ao tool calling: o que é preciso entender para construir com modelos de linguagem.
+
+1.1
+O que é inteligência artificial
+1.2
+O que é engenharia de IA
+1.3
+IA, Machine Learning, Deep Learning e IA generativa
+1.4
+Como funciona um LLM: tokens, contexto, amostragem e alucinação
+1.5
+Prompt engineering: papel, contexto, exemplos e formato
+1.6
+Treino vs contexto: fine-tuning ou RAG?
+1.7
+Embeddings: como a IA representa significado
+1.8
+RAG do zero: chunking, banco vetorial, retrieval e top-k
+1.9
+RAG melhor: reranking, busca híbrida e citações
+1.10
+Tool calling: como o modelo chama APIs
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / Agentes de código e modelos ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 3
+Agentes de código e modelos
+4 aulas
+2 h 31
+
+O Claude e outros agentes de codificação, contexto, spec-driven e como escolher modelos.
+
+3.1
+Agentes de código: o Claude e as outras ferramentas
+3.2
+Recursos do Claude e contexto para agentes de código
+3.3
+Spec-driven development: especificar antes de gerar código
+3.4
+Foundation models: como nascem e como escolher
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / 4
+Fundamentos técnicos ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 3
+Agentes de código e modelos
+4 aulas
+2 h 31
+
+O Claude e outros agentes de codificação, contexto, spec-driven e como escolher modelos.
+
+3.1
+Agentes de código: o Claude e as outras ferramentas
+3.2
+Recursos do Claude e contexto para agentes de código
+3.3
+Spec-driven development: especificar antes de gerar código
+3.4
+Foundation models: como nascem e como escolher
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / Frameworks de agentes ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 5
+Frameworks de agentes
+4 aulas
+1 h 25
+abre depois da anterior
+
+Padrões de agentes e os principais frameworks: LangChain, LangGraph e Google ADK.
+
+5.1
+Padrões de agentes e como escolher um framework
+7 min
+5.2
+LangChain: componentes e integrações
+18 min
+5.3
+LangGraph: agente como grafo de estados
+25 min
+5.4
+Google ADK: agentes, sub-agentes e A2A
+34 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Módulos da trilha / Fechamento ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 5
+Frameworks de agentes
+4 aulas
+1 h 25
+abre depois da anterior
+
+Padrões de agentes e os principais frameworks: LangChain, LangGraph e Google ADK.
+
+5.1
+Padrões de agentes e como escolher um framework
+7 min
+5.2
+LangChain: componentes e integrações
+18 min
+5.3
+LangGraph: agente como grafo de estados
+25 min
+5.4
+Google ADK: agentes, sub-agentes e A2A
+34 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Partes de uma aula / Texto ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 6
+Fechamento
+3 aulas
+18 min
+abre depois da anterior
+
+Tendências, o papel do Analista de IA, o checklist de produção e um projeto final do começo ao fim.
+
+6.1
+Para onde vai: tendências e o papel do Analista de IA
+4 min
+6.2
+Checklist de um agente pronto para produção
+4 min
+6.3
+Projeto final: um assistente do começo ao fim
+10 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Partes de uma aula / Vídeo ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 6
+Fechamento
+3 aulas
+18 min
+abre depois da anterior
+
+Tendências, o papel do Analista de IA, o checklist de produção e um projeto final do começo ao fim.
+
+6.1
+Para onde vai: tendências e o papel do Analista de IA
+4 min
+6.2
+Checklist de um agente pronto para produção
+4 min
+6.3
+Projeto final: um assistente do começo ao fim
+10 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Leia primeiro
+
+O texto explica o conceito, dá exemplos e diz o que observar no vídeo. Termos destacados abrem a definição sem sair da aula.
+
+termo
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Partes de uma aula / Prática ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 6
+Fechamento
+3 aulas
+18 min
+abre depois da anterior
+
+Tendências, o papel do Analista de IA, o checklist de produção e um projeto final do começo ao fim.
+
+6.1
+Para onde vai: tendências e o papel do Analista de IA
+4 min
+6.2
+Checklist de um agente pronto para produção
+4 min
+6.3
+Projeto final: um assistente do começo ao fim
+10 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Faça com as mãos
+
+Cada aula fecha com um exercício curto: desenhar, escrever ou revisar algo e, em algumas, rodar um código pequeno em Python, sem chave de API. Fazer fixa mais do que assistir de novo.
+
+print("olá, trilha")
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Partes de uma aula / Quiz ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 6
+Fechamento
+3 aulas
+18 min
+abre depois da anterior
+
+Tendências, o papel do Analista de IA, o checklist de produção e um projeto final do começo ao fim.
+
+6.1
+Para onde vai: tendências e o papel do Analista de IA
+4 min
+6.2
+Checklist de um agente pronto para produção
+4 min
+6.3
+Projeto final: um assistente do começo ao fim
+10 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Faça com as mãos
+
+Cada aula fecha com um exercício curto: desenhar, escrever ou revisar algo e, em algumas, rodar um código pequeno em Python, sem chave de API. Fazer fixa mais do que assistir de novo.
+
+print("olá, trilha")
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha
+
+========== Partes de uma aula / Retorno ==========
+Introdução à IA Generativa
+Módulo 0 · Comece aqui
+0.1 Como a trilha funciona
+Concluída
+Trilha · Analista de IA
+Do "o que é IA?" até um agente em produção
+
+Uma trilha para aprender a construir, avaliar e operar soluções com modelos de linguagem. Explore abaixo como ela funciona; leva um minuto.
+
+7
+módulos
+34
+aulas
+13 h 25
+de estudo
+24/34
+concluídas
+O mapa da trilha
+
+Toque em uma etapa para ver o que ela entrega.
+
+Comece aqui
+Introdução à IA e à engenharia de IA
+Engenharia em volta do modelo
+Agentes de código e modelos
+4
+Fundamentos técnicos
+Frameworks de agentes
+Fechamento
+Etapa 6
+Fechamento
+3 aulas
+18 min
+abre depois da anterior
+
+Tendências, o papel do Analista de IA, o checklist de produção e um projeto final do começo ao fim.
+
+6.1
+Para onde vai: tendências e o papel do Analista de IA
+4 min
+6.2
+Checklist de um agente pronto para produção
+4 min
+6.3
+Projeto final: um assistente do começo ao fim
+10 min
+Anterior
+Próxima
+Como é uma aula
+Texto
+Vídeo
+Prática
+Quiz
+Retorno
+Esta aula ficou clara?
+
+No fim de cada aula, diga se ficou clara, confusa, se o vídeo não ajudou ou se há erro. O retorno é anônimo.
+
+Clara
+Confusa
+Erro
+Anterior
+Próximo
+Planeje o seu ritmo
+
+Arraste para escolher em quantos dias quer fazer a trilha.
+
+Em 14 dias
+58 min
+por dia
+1
+0 1
+2
+1
+3
+1 2
+4
+2
+5
+2
+6
+2 3
+7
+3
+8
+3
+9
+3 4
+10
+4
+11
+4
+12
+4
+13
+4 5
+14
+5 6
+
+O tempo inclui vídeos e leitura, sem as práticas. Se ficar para trás, recupere aos poucos; maratonar no último dia rende pouco.
+
+Pronto para começar?
+
+Conclua esta aula, no fim da página, para abrir o módulo 1. A sua próxima aula é a 4.2.
+
+Ir para 4.2
+Prefere ler? Veja o texto completo
+Aula concluída.
+Próxima aula
+1.1 O que é inteligência artificial
+Ir para 1.1
+Esta aula ficou clara?
+Clara
+Confusa
+O vídeo não ajudou
+Tem um erro
+Nesta aula
+Aula de leitura: conclui pelo botão no fim do texto, depois de pelo menos 0 s na página.
+Leitura: 9 min · sugerido 6 min
+Próxima: 1.1
+Voltar à trilha

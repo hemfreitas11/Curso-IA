@@ -1,0 +1,92 @@
+Introdução à IA Generativa
+Módulo 4 · Fundamentos técnicos
+
+================ AULA 4.1 ================
+Python o suficiente para IA
+
+Python é a língua franca da IA. Para acompanhar o curso, basta ler e ajustar código simples: variáveis, listas, dicionários, funções, condicionais, repetições e tratamento de erros.
+
+Exemplos de referência:
+
+# Variáveis, listas e dicionários
+modelo = "um-modelo-qualquer"
+perguntas = ["Qual o prazo de entrega?", "Como troco minha senha?"]
+mensagem = {"papel": "usuario", "conteudo": "Como troco minha senha?"}
+
+def resumir(texto, limite=200):
+    return texto[:limite]
+
+for p in perguntas:
+    if "senha" in p.lower():
+        print(f"Pergunta de acesso: {p}")
+
+try:
+    valor = mensagem["prioridade"]
+except KeyError:
+    valor = "normal"
+
+Dicionários representam mensagens e respostas, funções representam ferramentas e try/except trata falhas de chamadas de rede e APIs.
+
+JSON é o formato comum de troca com APIs. json.loads converte texto JSON em dicionário; acessos sucessivos por chave e índice percorrem estruturas aninhadas. Tokens de entrada e saída aparecem nos dados de uso e afetam o custo.
+
+Quase todas as APIs recebem uma lista de mensagens com papéis: sistema (regras), usuário (pergunta) e assistente (respostas anteriores). O modelo não guarda memória entre chamadas; o programa envia a conversa novamente.
+
+Para praticar, instale Python 3.12 ou mais recente, crie ambiente virtual por projeto (python -m venv .venv), instale bibliotecas dentro dele e mantenha chaves de API fora do código, em variáveis de ambiente/arquivo .env ignorado pelo Git.
+
+Resumo interativo: Python para ler e ajustar; lendo um JSON; conversa com o modelo; chave de API no código; confira. Destaques: dicionários, funções e tratamento de erro.
+Vídeo complementar: curso de Python para iniciantes (2h03); capítulos indicados incluem variáveis, tipos, operadores, condicionais, listas, repetições e funções. A aula complementa com dicionários, JSON, erros, ambientes virtuais, bibliotecas e chaves. Ressalvas: nomes não podem começar por números; erros são detectados pelo editor ou na execução; nunca codifique senhas.
+
+Exercício: contar perguntas por categoria em uma lista de dicionários, calcular percentual resolvido, ler JSON, somar tokens e tratar KeyError para custo ausente.
+
+================ AULA 4.2 ================
+Git do zero, e Git com agentes
+
+Agentes mudam muitos arquivos rapidamente. Git permite saber o que mudou, revisar antes de aceitar e voltar com segurança. Também versiona prompts, configurações, testes e documentação.
+
+Três lugares: pasta de trabalho (edições atuais), staging (seleção para o próximo commit, git add) e histórico (commits, git commit). Branch é um nome para uma linha de commits; remoto é a cópia compartilhada no servidor.
+
+Fluxo: git clone; cd; git switch -c nome-da-tarefa; editar; git status; git diff; git add; git commit; git push -u origin branch; abrir PR, revisar, rodar testes e só então fazer merge. Para atualizar a principal: git switch main e git pull.
+
+Painel de revisão: git status mostra arquivos modificados/novos/preparados; git diff mostra as linhas; git log --oneline resume o histórico. Desfazer com segurança: git restore arquivo descarta edição local; git restore --staged arquivo tira da preparação; git revert <commit> cria novo commit que desfaz outro. Evite reset --hard e push --force em branches compartilhadas.
+
+Fluxo com agentes: tarefa e critérios de aceite; branch por tarefa (nunca diretamente na main); commits pequenos; PR com descrição e testes; revisão humana; merge após aprovação. Confira escopo, testes, arquivos não relacionados, segredos/dados pessoais, migrações e se você entende cada mudança.
+
+git worktree cria pastas paralelas ligadas ao mesmo repositório, permitindo agentes em branches distintas sem pisar nos arquivos; cada uma abre seu PR. O gargalo é a capacidade de revisar todos os PRs.
+
+Mensagens de commit explicam por que, não apenas o que. Segredos ficam fora do Git; .env deve estar em .gitignore. Se uma chave vazar, revogue-a imediatamente: apagar o arquivo não remove o histórico.
+
+Resumo interativo: os três lugares do Git; da tarefa ao merge; mensagem de commit; revisão do PR do agente; confira. Vídeo de 45 minutos: preparação, commit, branches e remoto; cautela com reset --hard/push --force. Exercício: criar repo, branch, commits, PR e duas worktrees.
+
+================ AULA 4.3 ================
+APIs e middleware: o agente conversando com os sistemas
+
+APIs tornam o agente útil ao consultar pedidos, pagamentos e atendimento. API é contrato oferecido por um sistema: rotas HTTP, parâmetros, autenticação e respostas JSON. Exemplo: GET /api/pedidos/48213 com Bearer token responde 200 e dados do pedido.
+
+Boas práticas de ferramentas: usar API e não banco (regras e permissões); autenticar como a pessoa ou com escopo mínimo; devolver apenas os campos necessários; erros legíveis; ações idempotentes; timeout e tentativas limitadas; registrar chamadas para investigação. Idempotência evita duplicar efeitos quando a chamada se repete, por exemplo com chave única por pedido.
+
+Middleware fica entre sistemas, traduz formatos, roteia mensagens, aplica regras e mantém filas. Sem ele, cada sistema precisa conhecer todos os outros. MCP padroniza como aplicações de IA consomem ferramentas; o servidor MCP continua chamando APIs e não as substitui.
+
+Resumo interativo: uma chamada de API; API ou banco?; erro que ajuda; idempotência na ação; confira. Vídeo: APIs, endpoints, HTTPS/autenticação, JSON/XML. Ressalvas: REST é estilo de arquitetura, não HTTP 1.1; endpoint é URL de uma operação; token de autenticação não é token de LLM; HTTPS usa TLS.
+
+Exercício: especificar rota, parâmetros, sucesso, erros legíveis e idempotência para uma ação de atendimento.
+
+================ AULA 4.4 ================
+Containers e deploy: do notebook ao servidor
+
+Em produção, o agente precisa funcionar continuamente, suportar usuários simultâneos, atualizar-se com segurança e recuperar-se de falhas. Container empacota aplicação, versão de Python, bibliotecas e arquivos. Dockerfile descreve a imagem; docker compose descreve várias peças.
+
+Exemplo de Dockerfile:
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+Uma aplicação pode separar API/agente, banco, servidor MCP e interface em containers. Deploy: merge do PR; pipeline executa testes e monta imagens; imagens vão ao registro com versão; plataforma atualiza serviço; migrações rodam; se necessário, volta-se à imagem anterior. A imagem testada deve ser a mesma que chega à produção.
+
+Cuidados de IA: segredos em variáveis/cofre, nunca código ou prompt; limites de gasto por provedor/usuário/conversa; timeout e tentativas com espera crescente; versão do modelo fixa e evals antes de trocar; prompt/configuração versionados; plano para indisponibilidade do fornecedor.
+
+Resumo interativo: do experimento ao serviço; caminho do deploy; versão do modelo; cuidados específicos de IA; confira. Vídeo introdutório sobre containers, separação de responsabilidades, Docker, orquestração e volumes. Container não simula um computador inteiro como VM; segredos não devem ir dentro da imagem.
+
+Exercício: listar variáveis de ambiente necessárias em produção, classificar segredo/não segredo e explicar o efeito de valor incorreto.

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provas — ATS Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">MATERIAL DE ESTUDO</p>
+      <h1>Provas</h1>
+      <p class="subtitle">Selecione uma prova para começar.</p>
+    </header>
+
+    <section id="selecao" class="card" aria-labelledby="titulo-selecao">
+      <h2 id="titulo-selecao">Escolha uma prova</h2>
+      <label for="prova-select">Prova</label>
+      <select id="prova-select"><option value="">Carregando…</option></select>
+      <p id="descricao-prova" class="muted"></p>
+      <button id="iniciar" disabled>Iniciar prova</button>
+    </section>
+
+    <section id="area-prova" class="card hidden" aria-live="polite">
+      <div class="question-meta">
+        <span id="progresso"></span>
+      </div>
+      <h2 id="pergunta"></h2>
+      <form id="alternativas" class="alternatives"></form>
+      <div id="aviso" class="notice" role="status"></div>
+      <div class="actions">
+        <button id="confirmar" type="button" disabled>Confirmar resposta</button>
+        <button id="proxima" type="button" class="secondary hidden">Próxima questão</button>
+        <button id="voltar-selecao" type="button" class="secondary">Sair da prova</button>
+      </div>
+    </section>
+
+    <section id="resultado" class="card hidden" aria-live="polite">
+      <h2>Prova concluída</h2>
+      <p id="pontuacao"></p>
+      <button id="nova-prova">Escolher outra prova</button>
+    </section>
+    <p id="erro" class="error" role="alert"></p>
+  </main>
+</body>
+</html>

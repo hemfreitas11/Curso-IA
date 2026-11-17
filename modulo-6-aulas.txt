@@ -1,0 +1,63 @@
+Introdução à IA Generativa
+Módulo 6 · Fechamento
+
+================ AULA 6.1 ================
+Para onde vai: tendências e o papel do Analista de IA
+
+Tendências: agentes completam tarefas mais longas; modelos de raciocínio permitem controlar esforço/custo; custo cai; multimodalidade reúne texto, imagem, áudio e vídeo; MCP e A2A padronizam integrações; sistemas multiagente coordenam especialistas; regulação e governança (AI Act, PL 2338/2023 e LGPD) tornam rastreabilidade, transparência e controle humano requisitos.
+
+O modelo vira peça trocável. O valor está em entender o problema (dor, usuário, sucesso e custo do erro), montar contexto e ferramentas (prompt, RAG, MCP/APIs e permissões), medir (evals antes e métricas em produção), operar com segurança (permissões, LGPD, auditoria e prompt injection) e ensinar usuários/ajustar processo.
+
+Previsões são incertas. Teste no caso real e decida com dados. Para se atualizar: fontes primárias; teste modelos com seu conjunto de evals; separe capacidade teórica de produto seguro e viável; registre resultados com números.
+
+Resumo interativo: tendências; valor em volta do modelo; acompanhar novidades; aviso sobre previsões; confira. Aula sem vídeo. Exercício: explicar em cinco linhas a diferença entre testar ferramenta e colocar solução em produção usando ao menos três conceitos.
+
+================ AULA 6.2 ================
+Checklist de um agente pronto para produção
+
+Problema: problema/público claros e métrica de sucesso; verificar se fluxo fixo resolveria melhor.
+Contexto e conhecimento: fontes definidas e atualizadas; medir recuperação RAG; instruções claras (papel, regras, formato e quando não souber).
+Ferramentas: pequenas, bem descritas e com validação; permissões de quem usa/menor privilégio; ações consequentes com confirmação humana e idempotência.
+Qualidade: evals com casos reais e de risco; linha de base e comparação a cada mudança; verificação antes de responder quando o risco justificar.
+Segurança e LGPD: defesas em camadas contra prompt injection; guardrails de escopo/dados pessoais; base legal, minimização e retenção; informar que é IA e oferecer humano.
+Operação: traces por turno e métricas de qualidade/custo/latência; prompt, base e configuração versionados com rollback; limites de custo/passos e alertas; deploy por pipeline, segredos fora do código, modelo fixo; responsável e revisão de conversas.
+
+Estudo: assistente de clínica no WhatsApp para preparo de exames, consultas e resultados. Definir escopo e encaminhamento; separar informar resultado de interpretá-lo; arquitetura de RAG, ferramentas, workflow e agente; proteger dados de saúde e identidade; definir cinco evals e métrica; monitorar e liberar gradualmente; alinhar expectativa de automação.
+
+Para consolidar, explicar o caminho da mensagem à resposta com RAG/ferramentas, como medir mudanças, importância do harness e como publicar com segurança. Aula sem vídeo.
+
+Resumo interativo: problema/contexto/ferramentas; qualidade/segurança/operação; pedido da diretoria; consolidar; confira.
+
+================ AULA 6.3 ================
+Projeto final: um assistente do começo ao fim
+
+Desafio: assistente de loja online responde troca, garantia, frete e reembolso, consulta pedido pelo número e encaminha com segurança o que não sabe. Construção com agente de código; trabalho do analista é especificar, conferir e medir. Reserve duas a três horas.
+
+Entregável (relatório curto): escopo e métrica; linha de base; três melhorias medidas individualmente; trace de falha e diagnóstico; comparação com referência; checklist 6.2 e pendências para produção.
+
+Políticas de referência:
+- Troca: até 7 dias corridos após recebimento; produto sem uso e embalagem original.
+- Garantia: eletrônicos por 12 meses da nota; não cobre quedas nem líquidos.
+- Frete: grátis acima de R$ 200; abaixo, valor aparece no carrinho.
+- Reembolso: mesma forma de pagamento em até 10 dias úteis após chegada ao centro.
+Pedido 48213: em transporte, previsão 12/11; outros números inexistentes.
+
+Dez testes: prazo de troca→7 dias (sem humano); garantia→12 meses (não); frete grátis→200 reais (não); reembolso→10 dias úteis (não); pedido 48213→em transporte (não); pedido 99999→atendente (sim); geladeira→atendente (sim); cartão clonado→atendente (sim); garantia cobre água→líquidos (não); produto usado→sem uso (não).
+
+Etapa 1 — escopo antes do código: definir respostas, encaminhamentos, proibições (não pedir cartão nem prometer além da política) e métrica, por exemplo 9/10 acertos e recall de encaminhamento 100%. Medir conteúdo e decisão binária separadamente.
+
+Etapa 2 — primeira versão: pasta vazia e arquivo de instruções para agente de código (Python, sem dependências/chave e explicar mudanças em português). Construir uma peça por vez: políticas divididas em trechos com fontes (RAG; busca lexical serve sem chave); função de consulta; decisão entre ferramenta, trecho confiável ou humano; traces; testes com conteúdo, precisão e recall. Conferir, entender e executar cada alteração. Linha de base esperada perto de 7/10, com recall 100% e precisão menor; investigar falhas pelos traces.
+
+Etapa 3 — melhorias uma de cada vez: tratar variações morfológicas (trocar/trocados, usado/sem uso); avaliar retorno de frase ou política inteira; ajustar limiar e acompanhar precisão/recall; adicionar casos para falhas e regressões.
+
+Etapa 4 — guardrails: entrada com cartão/senha/CPF vai a humano sem busca, assistente nunca solicita dados; saída precisa citar fonte, senão encaminha. Criar testes e conferir regressões.
+
+Etapa 5 — comparar com projeto de referência projeto-final-analista-ia, que contém versões inicial/final, testes de risco/guardrails e avaliador. Adaptar formato conforme AGENTS.md e comparar caso a caso. A referência erra dois casos intencionalmente; identificar por que são seguros.
+
+Etapa 6 opcional — usar API real: trocar cópia de política por geração condicionada à fonte, com citação e recusa quando não sabe; chave em variável de ambiente; repetir testes e medir tokens.
+
+Etapa 7 — aplicar checklist 6.2 e recomendar se está pronto, o que falta e em que ordem. Relatar números, separar automação segura de encaminhamento e não prometer além das evidências.
+
+Fechamento: o ciclo é entender pedido, construir com agente, medir, melhorar com evidência e comunicar honestamente o estado de prontidão.
+
+Resumo interativo: ciclo do projeto; o total engana; confira. Projeto percorre escopo/métrica, linha de base, melhorias, guardrails e prontidão. Aula sem vídeo.

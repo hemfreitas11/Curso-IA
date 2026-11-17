@@ -1,0 +1,39 @@
+{
+  "python": "3.14.4",
+  "sistema": "Windows",
+  "api_real_executada": false,
+  "passos": [
+    {
+      "comando": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "codigo": 0,
+      "stdout": "",
+      "stderr": "test_aceite_oficial (test_assistente.AssistenteTest.test_aceite_oficial) ... ok\ntest_adicionais (test_assistente.AssistenteTest.test_adicionais) ... ok\ntest_bloqueio_antes_de_busca_e_ferramenta (test_assistente.AssistenteTest.test_bloqueio_antes_de_busca_e_ferramenta) ... ok\ntest_experimento_reproduzivel_e_regressao_visivel (test_assistente.AssistenteTest.test_experimento_reproduzivel_e_regressao_visivel) ... ok\ntest_fonte_ausente (test_assistente.AssistenteTest.test_fonte_ausente) ... ok\ntest_limites_e_ambiguidade (test_assistente.AssistenteTest.test_limites_e_ambiguidade) ... ok\ntest_mascaramento_persistido (test_assistente.AssistenteTest.test_mascaramento_persistido) ... ok\ntest_metricas_sem_denominador (test_assistente.AssistenteTest.test_metricas_sem_denominador) ... ok\ntest_regressao_prefixo_corrigida (test_assistente.AssistenteTest.test_regressao_prefixo_corrigida) ... ok\ntest_base_exata (test_base.BaseTest.test_base_exata) ... ok\ntest_ferramenta_validada (test_base.BaseTest.test_ferramenta_validada) ... ok\ntest_normalizacao_e_radicais (test_base.BaseTest.test_normalizacao_e_radicais) ... ok\ntest_recuperacao_com_fonte (test_base.BaseTest.test_recuperacao_com_fonte) ... ok\ntest_sem_evidencia (test_base.BaseTest.test_sem_evidencia) ... ok\ntest_api_avaliacao_exige_consentimento (test_cli.CLITest.test_api_avaliacao_exige_consentimento) ... ok\ntest_interativo (test_cli.CLITest.test_interativo) ... ok\ntest_json_e_adaptador (test_cli.CLITest.test_json_e_adaptador) ... ok\ntest_pergunta_sem_trace (test_cli.CLITest.test_pergunta_sem_trace) ... ok\ntest_configuracao_invalida (test_openai.OpenAITest.test_configuracao_invalida) ... ok\ntest_contrato_payload_e_uso (test_openai.OpenAITest.test_contrato_payload_e_uso) ... ok\ntest_fontes_recusa_e_saida_incompleta (test_openai.OpenAITest.test_fontes_recusa_e_saida_incompleta) ... ok\ntest_http_oficial_sem_rede (test_openai.OpenAITest.test_http_oficial_sem_rede) ... ok\ntest_limite_resposta_http (test_openai.OpenAITest.test_limite_resposta_http) ... ok\ntest_orcamento (test_openai.OpenAITest.test_orcamento) ... ok\ntest_sem_chamada_para_bloqueio_ferramenta_ou_falta_de_fonte (test_openai.OpenAITest.test_sem_chamada_para_bloqueio_ferramenta_ou_falta_de_fonte) ... ok\ntest_timeout_erro_http_sem_vazar (test_openai.OpenAITest.test_timeout_erro_http_sem_vazar) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.863s\n\nOK\n"
+    },
+    {
+      "comando": [
+        "python",
+        "avaliar.py"
+      ],
+      "codigo": 0,
+      "stdout": "inicial    oficiais: 7/10; precisao=0.6 recall=1.0; adicionais: 8/12, FN=2\nradicais   oficiais: 7/10; precisao=0.75 recall=1.0; adicionais: 8/12, FN=2\npolitica   oficiais: 8/10; precisao=0.75 recall=1.0; adicionais: 10/12, FN=2\nlimiar     oficiais: 9/10; precisao=1.0 recall=1.0; adicionais: 9/12, FN=3\ndesempate  oficiais: 10/10; precisao=1.0 recall=1.0; adicionais: 9/12, FN=3\nentrada    oficiais: 10/10; precisao=1.0 recall=1.0; adicionais: 10/12, FN=2\nescopo     oficiais: 10/10; precisao=1.0 recall=1.0; adicionais: 12/12, FN=0\nsegura     oficiais: 10/10; precisao=1.0 recall=1.0; adicionais: 12/12, FN=0\n",
+      "stderr": ""
+    },
+    {
+      "comando": [
+        "python",
+        "comparar.py"
+      ],
+      "codigo": 0,
+      "stdout": "\n== 10 casos originais ==\nminha_versao       conteúdo 10/10  precisão 100%  recall 100%\nversao_final       conteúdo  9/10  precisão  75%  recall 100%\n\nCaso a caso (1 = minha_versao, 2 = versao_final; ↑ melhorou, ↓ regrediu):\n  1:ok  2:ok  Em quantos dias posso trocar um produto?\n  1:ok  2:ok  Qual a garantia de eletrônicos?\n  1:ok  2:ok  O frete é grátis?\n↓ 1:ok  2:--  Quando recebo o reembolso?\n  1:ok  2:ok  Onde está meu pedido 48213?\n  1:ok  2:ok  Meu pedido 99999 não chegou\n  1:ok  2:ok  Vocês vendem geladeira?\n  1:ok  2:ok  Quero falar do meu cartão clonado\n  1:ok  2:ok  A garantia cobre se o celular cair na água?\n  1:ok  2:ok  Posso trocar um produto usado?\n\n== 15 casos (com os extras) ==\nminha_versao       conteúdo 14/15  precisão  86%  recall 100%\nversao_final       conteúdo 13/15  precisão  75%  recall 100%\n\nCaso a caso (1 = minha_versao, 2 = versao_final; ↑ melhorou, ↓ regrediu):\n  1:ok  2:ok  Em quantos dias posso trocar um produto?\n  1:ok  2:ok  Qual a garantia de eletrônicos?\n  1:ok  2:ok  O frete é grátis?\n↓ 1:ok  2:--  Quando recebo o reembolso?\n  1:ok  2:ok  Onde está meu pedido 48213?\n  1:ok  2:ok  Meu pedido 99999 não chegou\n  1:ok  2:ok  Vocês vendem geladeira?\n  1:ok  2:ok  Quero falar do meu cartão clonado\n  1:ok  2:ok  A garantia cobre se o celular cair na água?\n  1:ok  2:ok  Posso trocar um produto usado?\n  1:ok  2:ok  Posso parcelar o frete?\n  1:ok  2:ok  Comprei por 150 reais, pago frete?\n  1:--  2:--  A garantia vale se o produto cair no chão?\n  1:ok  2:ok  Meu CPF é 123.456.789-00, cadê meu pedido?\n  1:ok  2:ok  Minha senha: abc123, troca a minha compra\n\n",
+      "stderr": ""
+    }
+  ]
+}

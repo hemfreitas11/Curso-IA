@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia — Precisão e Recall</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .guia-container { width: min(860px, calc(100% - 32px)); margin: 48px auto; }
+    .toc { padding: 18px 22px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface-raised); margin: 26px 0 34px; }
+    .toc-title { margin: 0 0 10px; font-size: .82rem; font-weight: 750; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; }
+    .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+    .toc li { margin: 4px 0; break-inside: avoid; }
+    .toc a { color: #c5d0df; text-decoration: none; }
+    .toc a:hover { color: var(--accent); text-decoration: underline; }
+    section.bloco { margin: 0 0 30px; scroll-margin-top: 24px; }
+    section.bloco > h2 { margin: 0 0 14px; font-size: 1.45rem; letter-spacing: -.015em; }
+    section.bloco p { margin: 0 0 14px; }
+    section.bloco ul, section.bloco ol { margin: 0 0 14px; padding-left: 24px; }
+    section.bloco li { margin: 6px 0; }
+    .keypoint { padding: 16px 20px; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; background: #1a2740; margin: 18px 0; font-weight: 600; }
+    .keypoint.warn { border-left-color: #e0a35a; background: #2b2313; }
+    .keypoint.good { border-left-color: #4fae86; background: #12291f; }
+    .formula { padding: 16px 20px; border: 1px dashed #45546b; border-radius: 10px; background: #101825; font-family: Consolas, "Courier New", monospace; font-size: 1.02rem; line-height: 1.8; overflow-x: auto; margin: 16px 0; white-space: pre; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .98rem; }
+    th, td { padding: 10px 14px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--surface-raised); font-weight: 700; }
+    tbody tr:nth-child(even) { background: #131a26; }
+    td.num, th.num { text-align: right; white-space: nowrap; }
+    .vp { color: #7fd6ae; font-weight: 650; }
+    .fp { color: #f0989f; font-weight: 650; }
+    .fn { color: #e0a35a; font-weight: 650; }
+    .vn { color: #8db4ff; font-weight: 650; }
+    .pergunta-card { padding: 18px 22px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-raised); margin: 14px 0; }
+    .pergunta-card .pergunta-label { display: inline-block; padding: 3px 11px; border-radius: 99px; font-size: .8rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+    .pergunta-label.precisao { background: #1c3557; color: #9cc0ff; }
+    .pergunta-label.recall { background: #173c2e; color: #7fd6ae; }
+    .pergunta-card p { margin: 10px 0 0; font-size: 1.06rem; }
+    .calc { font-size: 1.15rem; font-weight: 700; color: #f3f6fc; }
+    details.solucao { margin: 10px 0 18px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-raised); }
+    details.solucao summary { padding: 12px 18px; cursor: pointer; font-weight: 650; color: #c5d0df; }
+    details.solucao summary:hover { color: var(--accent); }
+    details.solucao .sol-body { padding: 4px 18px 16px; border-top: 1px solid var(--border); color: #c5d0df; }
+    .exercicio { margin: 18px 0; }
+    .exercicio p { margin: 0 0 6px; font-weight: 600; }
+    .rodape { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: .92rem; }
+    .voltar { display: inline-block; margin-bottom: 6px; color: var(--accent); text-decoration: none; font-weight: 650; }
+    .voltar:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .guia-container { margin: 24px auto; }
+      .toc ol { columns: 1; }
+      th, td { padding: 8px 10px; font-size: .92rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="guia-container">
+    <header>
+      <p class="eyebrow">MATERIAL DE ESTUDO</p>
+      <h1>Precisão e Recall</h1>
+      <p class="subtitle">Um guia para entender de verdade — sem pular etapas.</p>
+      <a class="voltar" href="index.html">← Voltar para as provas</a>
+    </header>
+
+    <nav class="toc" aria-label="Sumário do guia">
+      <p class="toc-title">Sumário</p>
+      <ol>
+        <li><a href="#s1">A ideia em duas perguntas</a></li>
+        <li><a href="#s2">Resolvendo a questão da imagem</a></li>
+        <li><a href="#s3">Os quatro resultados possíveis</a></li>
+        <li><a href="#s4">As fórmulas</a></li>
+        <li><a href="#s5">Analogia: frutas estragadas</a></li>
+        <li><a href="#s6">Bom em uma, ruim na outra</a></li>
+        <li><a href="#s7">Qual erro custa mais?</a></li>
+        <li><a href="#s8">O efeito do limiar</a></li>
+        <li><a href="#s9">Precisão ≠ acurácia</a></li>
+        <li><a href="#s10">Falta de informação e 0/0</a></li>
+        <li><a href="#s11">Roteiro para qualquer questão</a></li>
+        <li><a href="#s12">Exercícios</a></li>
+        <li><a href="#s13">Como usar a Prova 7</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section id="s1" class="bloco">
+      <h2>1. A ideia em duas perguntas</h2>
+      <p>Imagine que um assistente decide quais atendimentos enviar para uma pessoa.</p>
+      <div class="pergunta-card">
+        <span class="pergunta-label precisao">Precisão</span>
+        <p>Dos atendimentos que ele <strong>enviou</strong>, quantos realmente precisavam de uma pessoa?</p>
+      </div>
+      <div class="pergunta-card">
+        <span class="pergunta-label recall">Recall</span>
+        <p>Dos atendimentos que <strong>precisavam</strong> de uma pessoa, quantos ele conseguiu enviar?</p>
+      </div>
+      <p>Os dois olham para os mesmos acertos, mas comparam esses acertos com <strong>grupos diferentes</strong>.</p>
+      <div class="keypoint">Precisão olha para o que o sistema <em>selecionou</em>. Recall olha para o que ele <em>deveria encontrar</em>.</div>
+      <p>Recall também é chamado de <strong>sensibilidade</strong>. Neste guia, pense nele como a capacidade de encontrar os casos que não poderiam ficar de fora.</p>
+    </section>
+
+    <!-- 2 -->
+    <section id="s2" class="bloco">
+      <h2>2. Resolvendo a questão da imagem, sem pular etapas</h2>
+      <p>O enunciado diz:</p>
+      <blockquote class="pergunta-card"><p>De 100 casos, 20 exigiam humano. O sistema encaminhou 25, e 15 desses realmente exigiam humano.</p></blockquote>
+      <p>Separe as informações em três grupos:</p>
+      <table>
+        <thead><tr><th>Informação</th><th class="num">Quantidade</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td>Precisavam de humano</td><td class="num">20</td><td>A necessidade real, conferida por uma referência confiável</td></tr>
+          <tr><td>Foram encaminhados</td><td class="num">25</td><td>A escolha do sistema</td></tr>
+          <tr><td>Foram encaminhados <em>e</em> precisavam</td><td class="num">15</td><td>Os acertos dentro dos encaminhamentos</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Precisão: olhe para os 25 encaminhados</h3>
+      <p>Dos <strong>25 enviados</strong>, <strong>15 precisavam</strong>.</p>
+      <p class="calc">Precisão = 15 ÷ 25 = 0,60 = 60%</p>
+      <p>Em linguagem simples: de cada dez encaminhamentos, seis eram necessários e quatro não eram, considerando a proporção desse conjunto.</p>
+      <p>Os outros <strong>10 encaminhamentos</strong> eram desnecessários: 25 − 15 = 10.</p>
+
+      <h3>Recall: olhe para os 20 que precisavam</h3>
+      <p>Dos <strong>20 que precisavam</strong>, o sistema encontrou e enviou <strong>15</strong>.</p>
+      <p class="calc">Recall = 15 ÷ 20 = 0,75 = 75%</p>
+      <p>Em linguagem simples: encontrou três de cada quatro casos que precisavam de ajuda humana.</p>
+      <p>Os outros <strong>5 casos necessários ficaram de fora</strong>: 20 − 15 = 5.</p>
+
+      <div class="keypoint good">Resposta da questão: precisão de <strong>60%</strong> e recall de <strong>75%</strong>.</div>
+
+      <h3>Por que não dividir por 100?</h3>
+      <p>Porque 100 é o total de atendimentos. Nenhuma das duas perguntas está perguntando “do total de atendimentos”.</p>
+      <ul>
+        <li>Precisão pergunta <strong>dos encaminhados</strong>: a base é 25.</li>
+        <li>Recall pergunta <strong>dos que precisavam</strong>: a base é 20.</li>
+      </ul>
+      <p>O número 15 aparece nas duas contas porque representa os casos que o sistema encontrou <strong>e</strong> que eram necessários.</p>
+    </section>
+
+    <!-- 3 -->
+    <section id="s3" class="bloco">
+      <h2>3. Os quatro resultados possíveis</h2>
+      <p>Primeiro defina o que você quer detectar. Neste exemplo, o alvo é <strong>“precisa de humano”</strong>. Chamaremos esse alvo de <strong>positivo</strong>.</p>
+      <p>“Positivo” não significa bom. É apenas o nome do grupo que queremos detectar. Em um detector de fraude, por exemplo, positivo pode significar “é fraude”.</p>
+      <table>
+        <thead><tr><th>Decisão do sistema</th><th>Realmente precisava</th><th>Não precisava</th><th class="num">Total</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Encaminhou</strong></td><td><span class="vp">15</span>: verdadeiro positivo (VP)</td><td><span class="fp">10</span>: falso positivo (FP)</td><td class="num">25</td></tr>
+          <tr><td><strong>Não encaminhou</strong></td><td><span class="fn">5</span>: falso negativo (FN)</td><td><span class="vn">70</span>: verdadeiro negativo (VN)</td><td class="num">75</td></tr>
+          <tr><td><strong>Total</strong></td><td class="num">20</td><td class="num">80</td><td class="num">100</td></tr>
+        </tbody>
+      </table>
+      <p>Leia os nomes em duas partes:</p>
+      <ul>
+        <li><strong>Positivo/negativo:</strong> o que o sistema decidiu sobre o alvo.</li>
+        <li><strong>Verdadeiro/falso:</strong> se a decisão estava certa ou errada.</li>
+      </ul>
+      <table>
+        <thead><tr><th>Termo</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><span class="vp">Verdadeiro positivo</span></td><td>Enviou e precisava. Encontrou um caso real.</td></tr>
+          <tr><td><span class="fp">Falso positivo</span></td><td>Enviou, mas não precisava. Gerou um alarme indevido.</td></tr>
+          <tr><td><span class="fn">Falso negativo</span></td><td>Não enviou, mas precisava. Deixou um caso passar.</td></tr>
+          <tr><td><span class="vn">Verdadeiro negativo</span></td><td>Não enviou e não precisava. Acertou ao não agir.</td></tr>
+        </tbody>
+      </table>
+      <p>Os 70 verdadeiros negativos vêm dos 80 que não precisavam, menos os 10 encaminhados indevidamente.</p>
+    </section>
+
+    <!-- 4 -->
+    <section id="s4" class="bloco">
+      <h2>4. As fórmulas depois de entender a história</h2>
+      <div class="formula">Precisão = VP / (VP + FP)
+         = acertos selecionados / tudo que o sistema selecionou
+
+Recall   = VP / (VP + FN)
+         = acertos selecionados / tudo que realmente era alvo</div>
+      <p>Para escrever como porcentagem, multiplique o resultado por 100.</p>
+      <p><strong>Macete:</strong></p>
+      <ul>
+        <li><span class="pergunta-label precisao">Precisão</span> — “Quando o sistema apontou, acertou quanto?”</li>
+        <li><span class="pergunta-label recall">Recall</span> — “Do que precisava achar, achou quanto?”</li>
+      </ul>
+      <p>Se esquecer a fórmula, reconstrua a pergunta. É mais seguro do que decorar letras.</p>
+    </section>
+
+    <!-- 5 -->
+    <section id="s5" class="bloco">
+      <h2>5. Uma analogia: procurar frutas estragadas</h2>
+      <p>Há <strong>10 frutas estragadas</strong> em uma caixa. Você retira <strong>8 frutas</strong>, mas apenas <strong>6 das retiradas estão estragadas</strong>.</p>
+      <ul>
+        <li><strong>Precisão:</strong> das 8 retiradas, 6 estavam estragadas → <span class="calc">6/8 = 75%</span>.</li>
+        <li><strong>Recall:</strong> das 10 estragadas, você encontrou 6 → <span class="calc">6/10 = 60%</span>.</li>
+        <li><strong>Falsos positivos:</strong> 2 frutas boas retiradas à toa.</li>
+        <li><strong>Falsos negativos:</strong> 4 frutas estragadas que ficaram na caixa.</li>
+      </ul>
+      <div class="keypoint">Trocar “encaminhar atendimentos” por “retirar frutas” não muda o raciocínio.</div>
+    </section>
+
+    <!-- 6 -->
+    <section id="s6" class="bloco">
+      <h2>6. É possível ser muito bom em uma métrica e ruim na outra</h2>
+      <h3>Precisão alta, recall baixo</h3>
+      <p>Existem 100 casos necessários. O sistema seleciona só 10, e os 10 são necessários.</p>
+      <ul>
+        <li>Precisão: 10/10 = <span class="calc">100%</span>.</li>
+        <li>Recall: 10/100 = <span class="calc">10%</span>.</li>
+      </ul>
+      <p>Ele raramente aponta à toa, mas deixa muitos casos importantes para trás.</p>
+      <h3>Recall alto, precisão baixa</h3>
+      <p>Existem 10 casos necessários em 100 atendimentos. O sistema encaminha todos os 100.</p>
+      <ul>
+        <li>Precisão: 10/100 = <span class="calc">10%</span>.</li>
+        <li>Recall: 10/10 = <span class="calc">100%</span>.</li>
+      </ul>
+      <p>Ele não perde nenhum caso necessário, mas encaminha muita gente sem necessidade.</p>
+      <div class="keypoint warn">100% em uma métrica <strong>não</strong> garante 100% na outra.</div>
+    </section>
+
+    <!-- 7 -->
+    <section id="s7" class="bloco">
+      <h2>7. Qual erro custa mais?</h2>
+      <p>Não existe uma escolha ideal para todos os problemas.</p>
+      <table>
+        <thead><tr><th>Situação</th><th>Falso positivo</th><th>Falso negativo</th></tr></thead>
+        <tbody>
+          <tr><td>Encaminhar para humano</td><td>Envia um caso que o assistente poderia resolver</td><td>Deixa sem humano um caso que precisava</td></tr>
+          <tr><td>Detectar fraude</td><td>Sinaliza uma compra legítima</td><td>Deixa uma fraude passar</td></tr>
+          <tr><td>Bloquear dados sensíveis</td><td>Bloqueia uma mensagem legítima</td><td>Deixa um dado sensível passar</td></tr>
+          <tr><td>Buscar documentos</td><td>Recupera um documento irrelevante</td><td>Deixa de recuperar um documento relevante</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Se deixar um vazamento passar é muito grave, é importante buscar <strong>recall alto</strong>, sem ignorar os bloqueios indevidos.</li>
+        <li>Se os alarmes indevidos estão sobrecarregando a equipe, é importante investigar a <strong>precisão</strong>, sem esconder os casos necessários que estão ficando de fora.</li>
+      </ul>
+      <div class="keypoint">A decisão depende do custo dos dois erros, não apenas da porcentagem mais bonita.</div>
+    </section>
+
+    <!-- 8 -->
+    <section id="s8" class="bloco">
+      <h2>8. O que acontece ao mudar o limiar?</h2>
+      <p>Imagine que um filtro dá uma pontuação de risco e bloqueia mensagens a partir de certo valor.</p>
+      <ul>
+        <li>Um limiar <strong>mais baixo</strong> aceita mais mensagens como suspeitas: tende a encontrar mais riscos, mas também pode gerar mais alarmes indevidos.</li>
+        <li>Um limiar <strong>mais alto</strong> seleciona menos mensagens: pode reduzir alarmes indevidos, mas também deixar riscos passarem.</li>
+      </ul>
+      <p>Isso precisa ser medido em mensagens com classificação de referência. <strong>Bloquear mais não prova, por si só, que a precisão melhorou.</strong></p>
+      <div class="keypoint">No mesmo conjunto, com as mesmas pontuações e apenas o limiar mudando, ampliar os selecionados não perde os verdadeiros positivos que já estavam selecionados. O recall não cai nesse caso. Já a precisão depende de quantos dos novos selecionados são realmente alvo: pode cair, subir ou ficar igual.</div>
+    </section>
+
+    <!-- 9 -->
+    <section id="s9" class="bloco">
+      <h2>9. Precisão não é acurácia</h2>
+      <p><strong>Acurácia</strong> pergunta: “De todas as decisões, quantas estavam certas?”. Ela inclui os acertos de não encaminhar.</p>
+      <p>Na questão da imagem:</p>
+      <div class="formula">Acurácia = (VP + VN) / total
+         = (15 + 70) / 100
+         = 85%</div>
+      <p>Por isso a alternativa “precisão de 85%” está errada: 85% é a <strong>acurácia</strong>, não a precisão.</p>
+      <div class="keypoint warn">Um exemplo do perigo: em mil casos, só dez são perigosos. Um sistema que libera todos acerta os 990 comuns e tem <strong>99% de acurácia</strong>, mas encontra <strong>zero dos dez perigosos</strong>: recall de <strong>0%</strong>.</div>
+    </section>
+
+    <!-- 10 -->
+    <section id="s10" class="bloco">
+      <h2>10. Quando falta informação, não invente uma porcentagem</h2>
+      <ul>
+        <li>“O sistema encaminhou 25 casos.” → não basta para calcular precisão nem recall.</li>
+        <li>“Dos 25 encaminhados, 15 precisavam.” → permite calcular precisão, mas ainda falta saber quantos precisavam no total para calcular recall.</li>
+        <li>“Havia 20 necessários e 15 foram encontrados.” → permite calcular recall, mas ainda falta o total encaminhado para calcular precisão.</li>
+      </ul>
+      <h3>E quando o denominador é zero?</h3>
+      <ul>
+        <li>Nenhum caso selecionado: precisão seria 0/0, então fica <strong>indefinida nessa conta</strong>.</li>
+        <li>Nenhum caso realmente positivo: recall também fica <strong>indefinido nessa conta</strong>.</li>
+      </ul>
+      <p>Ferramentas podem adotar convenções, como mostrar zero ou não apresentar a métrica. É preciso declarar a convenção. <strong>Não trate uma divisão por zero como prova de desempenho perfeito.</strong></p>
+    </section>
+
+    <!-- 11 -->
+    <section id="s11" class="bloco">
+      <h2>11. Um roteiro para qualquer questão</h2>
+      <ol>
+        <li><strong>Defina o alvo.</strong> O que é “positivo” nesse problema?</li>
+        <li><strong>Separe realidade e decisão.</strong> Quantos eram alvo? Quantos foram selecionados?</li>
+        <li><strong>Encontre a interseção.</strong> Quantos selecionados realmente eram alvo? Esse é o VP.</li>
+        <li><strong>Escolha a pergunta.</strong> Dos selecionados (precisão) ou dos alvos reais (recall)?</li>
+        <li><strong>Faça a divisão e interprete.</strong> Não pare na porcentagem: diga o que ficou de fora e o que foi selecionado à toa.</li>
+      </ol>
+    </section>
+
+    <!-- 12 -->
+    <section id="s12" class="bloco">
+      <h2>12. Exercícios curtos para fazer antes da prova</h2>
+      <p>Tente responder sem olhar as soluções. Clique em “Ver solução” só depois de tentar.</p>
+
+      <div class="exercicio">
+        <p><strong>1.</strong> Existem 12 mensagens perigosas. O filtro bloqueia 10 mensagens, das quais 9 são perigosas. Qual é a precisão? E o recall?</p>
+        <details class="solucao">
+          <summary>Ver solução</summary>
+          <div class="sol-body"><p><strong>Precisão de 90%</strong> (9/10) e <strong>recall de 75%</strong> (9/12). Uma mensagem legítima foi bloqueada; três perigosas passaram.</p></div>
+        </details>
+      </div>
+
+      <div class="exercicio">
+        <p><strong>2.</strong> Um detector acerta todos os cinco alertas que emite, mas havia 25 problemas reais. O que está alto e o que está baixo?</p>
+        <details class="solucao">
+          <summary>Ver solução</summary>
+          <div class="sol-body"><p>Precisão de <strong>100%</strong> (5/5), mas recall de <strong>20%</strong> (5/25). Os poucos alertas são bons, mas vinte problemas ficaram sem alerta.</p></div>
+        </details>
+      </div>
+
+      <div class="exercicio">
+        <p><strong>3.</strong> Uma busca retorna 20 documentos, dos quais 8 são relevantes. Você consegue calcular recall apenas com isso? Por quê?</p>
+        <details class="solucao">
+          <summary>Ver solução</summary>
+          <div class="sol-body"><p><strong>Não.</strong> A precisão é <strong>40%</strong> (8/20), mas falta saber quantos documentos relevantes existiam no conjunto avaliado para calcular recall.</p></div>
+        </details>
+      </div>
+
+      <div class="exercicio">
+        <p><strong>4.</strong> Um filtro gera 30 alarmes: 18 corretos e 12 indevidos. Há 6 riscos que passaram sem alarme. Identifique VP, FP e FN; depois calcule as métricas.</p>
+        <details class="solucao">
+          <summary>Ver solução</summary>
+          <div class="sol-body"><p><span class="vp">VP = 18</span>, <span class="fp">FP = 12</span>, <span class="fn">FN = 6</span>. Precisão = 18/30 = <strong>60%</strong>. Recall = 18/(18 + 6) = <strong>75%</strong>.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section id="s13" class="bloco">
+      <h2>13. Como usar a prova específica</h2>
+      <p>Na <a href="index.html">página de provas</a>, escolha <strong>Prova 7 — Precisão e recall</strong>. São 30 questões embaralhadas, com interpretação, cálculos, comparação de sistemas, erros de classificação e limites das métricas.</p>
+      <p>Antes de marcar, tente dizer em voz alta: <strong>“Estou dividindo por este número porque a pergunta fala deste grupo.”</strong></p>
+      <p>Depois de confirmar, leia também as explicações das alternativas incorretas. Elas mostram confusões comuns: inverter as bases, usar o total de casos ou confundir precisão com acurácia.</p>
+      <div class="keypoint">Refazer e acertar pela posição da alternativa não prova compreensão. Para conferir se fixou, explique a conta sem olhar as opções e aplique o raciocínio a outro cenário.</div>
+    </section>
+
+    <footer class="rodape">
+      <p>Base: aula 2.4 de <code>modulo-2-aulas.txt</code> (avaliação, matriz de confusão, precisão e recall). Os exemplos, exercícios e casos-limite deste guia são complementos didáticos; não pressupõem conteúdo de módulos posteriores.</p>
+    </footer>
+  </main>
+</body>
+</html>

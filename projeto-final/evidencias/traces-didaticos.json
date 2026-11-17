@@ -1,0 +1,258 @@
+{
+  "nota": "Exemplos fictícios. Registros de falha e correção; sem dados reais.",
+  "falha_inicial": {
+    "versao": "inicial",
+    "pergunta": "Em quantos dias posso trocar um produto?",
+    "busca": {
+      "encontrado": true,
+      "limiar": 0.5,
+      "consulta": [
+        "dias",
+        "produto",
+        "trocar"
+      ],
+      "candidatos": [
+        {
+          "fonte": "Reembolso",
+          "texto": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro.",
+          "politica": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro.",
+          "score": 0.6666666666666666,
+          "comuns": [
+            "dias",
+            "produto"
+          ],
+          "exatos": 2
+        },
+        {
+          "fonte": "Prazo de troca",
+          "texto": "Produtos podem ser trocados em até 7 dias corridos após o recebimento.",
+          "politica": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. O produto precisa estar sem uso e na embalagem original.",
+          "score": 0.3333333333333333,
+          "comuns": [
+            "dias"
+          ],
+          "exatos": 1
+        },
+        {
+          "fonte": "Prazo de troca",
+          "texto": "O produto precisa estar sem uso e na embalagem original.",
+          "politica": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. O produto precisa estar sem uso e na embalagem original.",
+          "score": 0.3333333333333333,
+          "comuns": [
+            "produto"
+          ],
+          "exatos": 1
+        },
+        {
+          "fonte": "Garantia",
+          "texto": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal.",
+          "politica": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal. A garantia não cobre quedas nem contato com líquidos.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Garantia",
+          "texto": "A garantia não cobre quedas nem contato com líquidos.",
+          "politica": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal. A garantia não cobre quedas nem contato com líquidos.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Frete",
+          "texto": "O frete é grátis para compras acima de 200 reais.",
+          "politica": "O frete é grátis para compras acima de 200 reais. Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Frete",
+          "texto": "Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "politica": "O frete é grátis para compras acima de 200 reais. Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        }
+      ]
+    },
+    "ferramenta": null,
+    "resposta": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro. (Reembolso)",
+    "fonte": "Reembolso",
+    "encaminhar": false,
+    "motivo": "politica",
+    "latencia_ms": 0.319
+  },
+  "regressao_radicais": {
+    "versao": "radicais",
+    "pergunta": "Quando recebo o reembolso?",
+    "busca": {
+      "encontrado": true,
+      "limiar": 0.5,
+      "consulta": [
+        "receb",
+        "reemb"
+      ],
+      "candidatos": [
+        {
+          "fonte": "Prazo de troca",
+          "texto": "Produtos podem ser trocados em até 7 dias corridos após o recebimento.",
+          "politica": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. O produto precisa estar sem uso e na embalagem original.",
+          "score": 0.5,
+          "comuns": [
+            "receb"
+          ],
+          "exatos": 0
+        },
+        {
+          "fonte": "Reembolso",
+          "texto": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro.",
+          "politica": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro.",
+          "score": 0.5,
+          "comuns": [
+            "reemb"
+          ],
+          "exatos": 1
+        },
+        {
+          "fonte": "Prazo de troca",
+          "texto": "O produto precisa estar sem uso e na embalagem original.",
+          "politica": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. O produto precisa estar sem uso e na embalagem original.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Garantia",
+          "texto": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal.",
+          "politica": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal. A garantia não cobre quedas nem contato com líquidos.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Garantia",
+          "texto": "A garantia não cobre quedas nem contato com líquidos.",
+          "politica": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal. A garantia não cobre quedas nem contato com líquidos.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Frete",
+          "texto": "O frete é grátis para compras acima de 200 reais.",
+          "politica": "O frete é grátis para compras acima de 200 reais. Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Frete",
+          "texto": "Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "politica": "O frete é grátis para compras acima de 200 reais. Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        }
+      ]
+    },
+    "ferramenta": null,
+    "resposta": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. (Prazo de troca)",
+    "fonte": "Prazo de troca",
+    "encaminhar": false,
+    "motivo": "politica",
+    "latencia_ms": 0.287
+  },
+  "correcao_desempate": {
+    "versao": "segura",
+    "pergunta": "Quando recebo o reembolso?",
+    "busca": {
+      "encontrado": true,
+      "limiar": 0.3,
+      "consulta": [
+        "receb",
+        "reemb"
+      ],
+      "candidatos": [
+        {
+          "fonte": "Reembolso",
+          "texto": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro.",
+          "politica": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro.",
+          "score": 0.5,
+          "comuns": [
+            "reemb"
+          ],
+          "exatos": 1
+        },
+        {
+          "fonte": "Prazo de troca",
+          "texto": "Produtos podem ser trocados em até 7 dias corridos após o recebimento.",
+          "politica": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. O produto precisa estar sem uso e na embalagem original.",
+          "score": 0.5,
+          "comuns": [
+            "receb"
+          ],
+          "exatos": 0
+        },
+        {
+          "fonte": "Prazo de troca",
+          "texto": "O produto precisa estar sem uso e na embalagem original.",
+          "politica": "Produtos podem ser trocados em até 7 dias corridos após o recebimento. O produto precisa estar sem uso e na embalagem original.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Garantia",
+          "texto": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal.",
+          "politica": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal. A garantia não cobre quedas nem contato com líquidos.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Garantia",
+          "texto": "A garantia não cobre quedas nem contato com líquidos.",
+          "politica": "Eletrônicos têm garantia de 12 meses a partir da data da nota fiscal. A garantia não cobre quedas nem contato com líquidos.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Frete",
+          "texto": "O frete é grátis para compras acima de 200 reais.",
+          "politica": "O frete é grátis para compras acima de 200 reais. Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        },
+        {
+          "fonte": "Frete",
+          "texto": "Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "politica": "O frete é grátis para compras acima de 200 reais. Abaixo disso, o valor aparece no carrinho antes de pagar.",
+          "score": 0.0,
+          "comuns": [],
+          "exatos": 0
+        }
+      ]
+    },
+    "ferramenta": null,
+    "resposta": "O reembolso é feito na mesma forma de pagamento em até 10 dias úteis depois que o produto devolvido chega ao nosso centro. (Reembolso)",
+    "fonte": "Reembolso",
+    "encaminhar": false,
+    "motivo": "politica",
+    "latencia_ms": 0.292
+  },
+  "bloqueio_sensivel": {
+    "versao": "segura",
+    "pergunta": "Meu CPF é [CPF MASCARADO], cadê meu pedido?",
+    "busca": null,
+    "ferramenta": null,
+    "resposta": "Vou encaminhar para um atendente. Não consigo responder com segurança.",
+    "fonte": null,
+    "encaminhar": true,
+    "motivo": "dados_sensiveis",
+    "latencia_ms": 0.013
+  }
+}

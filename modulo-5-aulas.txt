@@ -1,0 +1,83 @@
+Introdução à IA Generativa
+Módulo 5 · Frameworks de agentes
+
+================ AULA 5.1 ================
+Padrões de agentes e como escolher um framework
+
+Comece pelo padrão mais simples que resolve; cada nível acrescenta custo, latência e pontos de falha.
+1. Encadeamento: etapas fixas com chamadas separadas; validar saídas entre elas.
+2. Roteamento: classificador encaminha cada caso a fluxo especializado; medir com mensagens reais rotuladas.
+3. Paralelização: dividir critérios em chamadas simultâneas ou gerar/votar respostas.
+4. ReAct: modelo raciocina, chama ferramenta, observa resultado e repete (aula 2.8).
+5. Orquestrador e trabalhadores: principal delega a subagentes com contexto/ferramentas próprias; útil em tarefas grandes.
+6. Avaliador e otimizador: um gera, outro avalia critérios e pede correção.
+7. Multiagente: especialistas cooperam; poderoso, porém caro e difícil de depurar. Só usar quando os demais não bastam.
+
+Em qualquer padrão: aprovação humana para ações consequentes, limites de passos/custo/tempo, registro de passos e saída honesta/encaminhamento.
+
+Escolha: prompt e RAG se bastam; passos previsíveis pedem encadeamento/roteamento; passos dependentes do caso pedem ReAct; tarefa divisível pode usar orquestrador; critérios claros permitem avaliador. Multiagente exige especialidades realmente separadas.
+
+Frameworks apresentados: LangGraph (grafo de estados e controle fino); Google ADK (agentes/workflows, multiagente, A2A); Claude Agent SDK (ferramentas de arquivo/terminal, subagentes, skills, MCP e contexto); OpenAI Agents SDK (leve, handoffs e tracing). Produtos mudam; o critério duradouro é resolver o problema com menos complexidade.
+
+Framework é biblioteca de montagem; runtime é como roda em produção (filas, sessões, persistência, escala); harness é instruções, ferramentas, contexto, limites e verificação. Escolher framework não resolve runtime nem harness.
+
+Um agente simples pode ser um loop de tool calling: enviar mensagens ao modelo, executar chamadas com validação/permissão, devolver resultados e parar ao atingir resposta final ou limite de passos. Para casos simples, isso pode bastar sem framework.
+
+Resumo interativo: do mais simples ao mais complexo; como escolher; framework/runtime/harness; sem framework; confira. Aula sem vídeo. Exercício: desenhar assistente de faturas com classificação, busca, consulta autenticada e verificação. Prática com modelo simulado mostra ciclo e limite de passos.
+
+================ AULA 5.2 ================
+LangChain: componentes e integrações
+
+LangChain (Python e JavaScript) é uma biblioteca de peças padronizadas para aplicações com LLM: interfaces para modelos de vários fornecedores, prompts com variáveis, ferramentas derivadas de funções, componentes RAG (embeddings, carregadores, divisores e bancos vetoriais), saída estruturada e integrações.
+
+Exemplo conceitual:
+from langchain.chat_models import init_chat_model
+from langchain_core.tools import tool
+
+@tool
+def status_do_pedido(numero: str) -> str:
+    """Consulta status e previsão pelo número do pedido."""
+    return consultar_sistema_de_pedidos(numero)
+
+modelo = init_chat_model("fornecedor:nome-do-modelo").bind_tools([status_do_pedido])
+resposta = modelo.invoke("O pedido 48213 já saiu para entrega?")
+
+A docstring vira descrição que o modelo lê para decidir quando usar ferramenta. O modelo pede a chamada; não executa a função por si. Trocar fornecedor pode ser trocar a configuração, se houver integração instalada.
+
+Use para evitar reescrever integrações e trocar peças. Abstrações podem esconder o que foi enviado, dificultando diagnóstico; para algo pequeno, SDK oficial pode ser mais simples e transparente. Versões mudam rápido: confira documentação atual. O agente pronto create_agent é construído sobre LangGraph; para controlar fluxo/estado/aprovação, use LangGraph diretamente.
+
+Resumo interativo: o que é LangChain; peças da caixa; quem faz o quê numa ferramenta; quando usar; agentes e LangGraph; confira. Vídeo compara pipeline e grafo, estado, humano no meio e checkpoints. Ressalva: oposição entre agente LangChain e LangGraph ficou datada com LangChain v1.
+
+Exercício: listar componentes LangChain para RAG e seus papéis em indexação e consulta.
+
+================ AULA 5.3 ================
+LangGraph: agente como grafo de estados
+
+LangGraph modela agente como grafo: estado (mensagens, resultados, decisões), nós (funções que recebem estado e devolvem atualizações) e arestas (inclusive condicionais). O ciclo fica explícito, desenhável, testável e controlável.
+
+Exemplo conceitual com StateGraph, MessagesState, nós agente/ferramentas, aresta condicional tools_condition e retorno das ferramentas ao agente. O ciclo ReAct segue até o modelo não pedir ferramentas.
+
+Vantagens: controle dos caminhos; checkpoints para retomar/depurar; pausa para aprovação humana antes de ação; streaming de passos à interface; composição de grafos. Exemplo de atendimento: entender pedido → decidir se precisa dados → ferramentas → redigir → verificar → refazer ou encerrar; reembolso pode exigir aprovação humana.
+
+Para agente simples sem estado persistente nem aprovação, loop direto pode ser mais fácil. LangGraph compensa com caminhos, pausas e retomadas.
+
+Resumo interativo: estado/nós/arestas; agente ReAct desenhado; exemplo de atendimento; por que usar; confira. Vídeo constrói agente com busca. Ressalvas: create_react_agent do vídeo é de versão antiga; confira imports atuais. Opiniões sobre low-code e afirmações sem fonte não são regras gerais. Nunca incluir chave no código; avaliar em quantidade.
+
+Exercício: desenhar grafo para agendamento com consulta de horários, proposta, escolha da pessoa e confirmação, indicando nós, condições e pausas.
+
+================ AULA 5.4 ================
+Google ADK: agentes, sub-agentes e A2A
+
+Agent Development Kit (ADK) é framework aberto do Google, lançado em 2025, para agentes/sistemas multiagente. Principalmente Python, aceita Gemini e modelos de outros fornecedores.
+
+Peças: LlmAgent/Agent com modelo, instruções e ferramentas; ferramentas Python, prontas, outros agentes e MCP; SequentialAgent, ParallelAgent e LoopAgent para workflows previsíveis; subagentes e delegação; sessão/estado/memória; avaliação e interface web de desenvolvimento; deploy em Google Cloud ou container.
+
+Exemplo conceitual: função status_do_pedido com docstring usada como ferramenta de um Agent com nome, modelo e instruções. Pode combinar workflow sequencial de classificação/resolução e loop limitado de revisão/correção; autonomia fica só onde precisa.
+
+A2A (Agent2Agent) é protocolo aberto proposto pelo Google para agentes de fornecedores/frameworks diferentes descobrirem capacidades por cartões e delegarem tarefas sem conhecer implementação. ADK suporta A2A, mas o protocolo não é exclusivo dele.
+
+Comparação: LangGraph enfatiza grafo explícito, controle fino, pausas e retomadas; ADK enfatiza agentes/workflows prontos, multiagente, A2A e avaliação. Conceitos podem ser comparados implementando mesma tarefa nos dois.
+
+Resumo interativo: peças ADK; três agentes workflow; workflow e agentes juntos; A2A; LangGraph e ADK; confira. Vídeo mostra interface web, eventos, docstring e subagentes. Não mostra workflows nem A2A. Ressalva de segurança: vídeo pede senha e compara a senha fixa; nunca peça senha ao modelo, autenticação deve ficar no código.
+
+Projeto citado: agente-adk-streamlit, assistente de estudos com Streamlit, Groq, ferramenta própria, MCP local e público e guardrails. Exercício: redesenhar agente de agendamento da aula 5.3 com agentes e workflows ADK.

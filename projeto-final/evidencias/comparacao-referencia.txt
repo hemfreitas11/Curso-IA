@@ -1,0 +1,37 @@
+
+== 10 casos originais ==
+minha_versao       conteúdo 10/10  precisão 100%  recall 100%
+versao_final       conteúdo  9/10  precisão  75%  recall 100%
+
+Caso a caso (1 = minha_versao, 2 = versao_final; ↑ melhorou, ↓ regrediu):
+  1:ok  2:ok  Em quantos dias posso trocar um produto?
+  1:ok  2:ok  Qual a garantia de eletrônicos?
+  1:ok  2:ok  O frete é grátis?
+↓ 1:ok  2:--  Quando recebo o reembolso?
+  1:ok  2:ok  Onde está meu pedido 48213?
+  1:ok  2:ok  Meu pedido 99999 não chegou
+  1:ok  2:ok  Vocês vendem geladeira?
+  1:ok  2:ok  Quero falar do meu cartão clonado
+  1:ok  2:ok  A garantia cobre se o celular cair na água?
+  1:ok  2:ok  Posso trocar um produto usado?
+
+== 15 casos (com os extras) ==
+minha_versao       conteúdo 14/15  precisão  86%  recall 100%
+versao_final       conteúdo 13/15  precisão  75%  recall 100%
+
+Caso a caso (1 = minha_versao, 2 = versao_final; ↑ melhorou, ↓ regrediu):
+  1:ok  2:ok  Em quantos dias posso trocar um produto?
+  1:ok  2:ok  Qual a garantia de eletrônicos?
+  1:ok  2:ok  O frete é grátis?
+↓ 1:ok  2:--  Quando recebo o reembolso?
+  1:ok  2:ok  Onde está meu pedido 48213?
+  1:ok  2:ok  Meu pedido 99999 não chegou
+  1:ok  2:ok  Vocês vendem geladeira?
+  1:ok  2:ok  Quero falar do meu cartão clonado
+  1:ok  2:ok  A garantia cobre se o celular cair na água?
+  1:ok  2:ok  Posso trocar um produto usado?
+  1:ok  2:ok  Posso parcelar o frete?
+  1:ok  2:ok  Comprei por 150 reais, pago frete?
+  1:--  2:--  A garantia vale se o produto cair no chão?
+  1:ok  2:ok  Meu CPF é 123.456.789-00, cadê meu pedido?
+  1:ok  2:ok  Minha senha: abc123, troca a minha compra

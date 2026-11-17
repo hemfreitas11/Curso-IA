@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Segredos e arquivos locais
+.env
+.pytest_cache/
+.adk/
+*.db
+.sessao_atual
